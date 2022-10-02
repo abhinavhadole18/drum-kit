@@ -56,7 +56,7 @@ function makesound(key)
 
 
    case "h":
-   var crash=new Audio("sounds/clap.wav");
+   var crash=new Audio("sounds/kick.wav");
    crash.play();
    break;
 
