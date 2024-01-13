@@ -39,7 +39,7 @@ function makesound(key)
 
 
    case "d":
-   var tom3=new Audio("sound/kick.wav");
+   var tom3=new Audio("sound/rim.wav");
    tom3.play();
    break;
 
@@ -50,7 +50,7 @@ function makesound(key)
    break;
 
    case "g":
-   var snare=new Audio("sound/kick.wav");
+   var snare=new Audio("sound/chat.wav");
    snare.play();
    break;
 
@@ -61,7 +61,7 @@ function makesound(key)
    break;
 
    case "j":
-   var bass=new Audio("sound/chat.wav");
+   var bass=new Audio("sound/kick.wav");
    bass.play();
    break;
 
