@@ -33,19 +33,19 @@ function makesound(key)
    break;
 
    case "s":
-   var tom2=new Audio("sound/tom.wav");
+   var tom2=new Audio("sound/ohat.wav");
    tom2.play();
    break;
 
 
    case "d":
-   var tom3=new Audio("sound/ohat.wav");
+   var tom3=new Audio("sound/rim.wav");
    tom3.play();
    break;
 
 
    case "f":
-   var tom4=new Audio("sound/rim.wav");
+   var tom4=new Audio("sound/clap.wav");
    tom4.play();
    break;
 
