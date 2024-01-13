@@ -28,40 +28,40 @@ function makesound(key)
   switch(key)
   {
    case "a":
-   var tom1=new Audio("sounds/crash.wav");
+   var tom1=new Audio("sound/crash.wav");
    tom1.play();
    break;
 
    case "s":
-   var tom2=new Audio("sounds/tom.wav");
+   var tom2=new Audio("sound/tom.wav");
    tom2.play();
    break;
 
 
    case "d":
-   var tom3=new Audio("sounds/kick.wav");
+   var tom3=new Audio("sound/kick.wav");
    tom3.play();
    break;
 
 
    case "f":
-   var tom4=new Audio("sounds/ohat.wav");
+   var tom4=new Audio("sound/ohat.wav");
    tom4.play();
    break;
 
    case "g":
-   var snare=new Audio("sounds/kick.wav");
+   var snare=new Audio("sound/kick.wav");
    snare.play();
    break;
 
 
    case "h":
-   var crash=new Audio("sounds/snare.wav");
+   var crash=new Audio("sound/snare.wav");
    crash.play();
    break;
 
    case "j":
-   var bass=new Audio("sounds/chat.wav");
+   var bass=new Audio("sound/chat.wav");
    bass.play();
    break;
 
