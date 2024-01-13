@@ -27,43 +27,57 @@ function makesound(key)
 {
   switch(key)
   {
-   case "a":
+   case "f":
    var tom1=new Audio("sound/crash.wav");
    tom1.play();
    break;
 
-   case "s":
-   var tom2=new Audio("sound/ohat.wav");
+
+
+   case "g":
+   var tom1=new Audio("sound/tom.wav");
+   tom1.play();
+   break;
+
+   case "j":
+   var tom2=new Audio("sound/clap.wav");
    tom2.play();
    break;
 
 
-   case "d":
+   case "h":
    var tom3=new Audio("sound/rim.wav");
    tom3.play();
    break;
 
 
-   case "f":
-   var tom4=new Audio("sound/clap.wav");
+   case "c":
+   var tom4=new Audio("sound/kick.wav");
    tom4.play();
    break;
 
-   case "g":
-   var snare=new Audio("sound/kick.wav");
+   case "k":
+   var tom4=new Audio("sound/kick.wav");
+   tom4.play();
+   break;
+
+   case "v":
+   var snare=new Audio("sound/snare.wav");
    snare.play();
    break;
 
 
-   case "h":
-   var crash=new Audio("sound/snare.wav");
+   case "b":
+   var crash=new Audio("sound/ohat.wav");
    crash.play();
    break;
 
-   case "j":
+   case "n":
    var bass=new Audio("sound/chat.wav");
    bass.play();
    break;
+
+   
 
 }
 }
