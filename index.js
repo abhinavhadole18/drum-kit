@@ -1,96 +1,63 @@
-
-
-
-
-for(var i=0; i<document.querySelectorAll(".drum").length;i++ )
-{
-
-document.querySelectorAll(".drum")[i].addEventListener("click", function ()
-{
-  var buttons= this.innerHTML;
-
-  makesound(buttons);
- buttona(buttons);
-
-});
+// 🔹 Enable mouse/touch clicks on buttons
+for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
+  document.querySelectorAll(".drum")[i].addEventListener("click", function () {
+    var buttonKey = this.classList[0]; // first class is the key (f, g, h, etc.)
+    makesound(buttonKey);
+    buttona(buttonKey);
+  });
 }
 
-
-document.addEventListener("keypress",function(event){
-makesound(event.key);
-buttona(event.key);
+// 🔹 Enable keyboard presses
+document.addEventListener("keypress", function (event) {
+  makesound(event.key);
+  buttona(event.key);
 });
 
+// 🔹 Play correct sound
+function makesound(key) {
+  switch (key) {
+    case "f":
+      new Audio("sound/crash.wav").play();
+      break;
 
+    case "g":
+      new Audio("sound/tom.wav").play();
+      break;
 
-function makesound(key)
-{
-  switch(key)
-  {
-   case "f":
-   var tom1=new Audio("sound/crash.wav");
-   tom1.play();
-   break;
+    case "j":
+      new Audio("sound/clap.wav").play();
+      break;
 
+    case "h":
+      new Audio("sound/rim.wav").play();
+      break;
 
+    case "c":
+    case "k": // extra key for kick
+      new Audio("sound/kick.wav").play();
+      break;
 
-   case "g":
-   var tom1=new Audio("sound/tom.wav");
-   tom1.play();
-   break;
+    case "v":
+      new Audio("sound/snare.wav").play();
+      break;
 
-   case "j":
-   var tom2=new Audio("sound/clap.wav");
-   tom2.play();
-   break;
+    case "b":
+      new Audio("sound/ohat.wav").play();
+      break;
 
-
-   case "h":
-   var tom3=new Audio("sound/rim.wav");
-   tom3.play();
-   break;
-
-
-   case "c":
-   var tom4=new Audio("sound/kick.wav");
-   tom4.play();
-   break;
-
-   case "k":
-   var tom4=new Audio("sound/kick.wav");
-   tom4.play();
-   break;
-
-   case "v":
-   var snare=new Audio("sound/snare.wav");
-   snare.play();
-   break;
-
-
-   case "b":
-   var crash=new Audio("sound/ohat.wav");
-   crash.play();
-   break;
-
-   case "n":
-   var bass=new Audio("sound/chat.wav");
-   bass.play();
-   break;
-
-   
-
-}
+    case "n":
+      new Audio("sound/chat.wav").play();
+      break;
+  }
 }
 
-
-
-function buttona(currentKey)
-{
-  var activeb=document.querySelector("."+currentKey);
+// 🔹 Button animation (flash effect)
+function buttona(currentKey) {
+  var activeb = document.querySelector("." + currentKey);
+  if (!activeb) return; // avoid errors for wrong keys
 
   activeb.classList.add("pressed");
-
-  setTimeout(function(){
-activeb.classList.remove("pressed");
-},100);
+  setTimeout(function () {
+    activeb.classList.remove("pressed");
+  }, 100);
 }
